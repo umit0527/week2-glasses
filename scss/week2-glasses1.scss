@@ -65,7 +65,7 @@ body{
 
         }
         .menu{
-            width:492px;
+            width:45.35%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -91,7 +91,7 @@ body{
             flex-direction: column;
             padding-right: 24px;
             .branch-title{
-                width: 1070px;
+                width: 100%;
             }
             h2{
                 display: flex;
@@ -105,9 +105,8 @@ body{
             }
             
             .branches-choose{
-                width:400px;
+                width:100%;
                 display: flex;
-                justify-content: space-between;
                 align-items: center;
                 padding-top: 20px;
                 padding-bottom:40px;
@@ -117,6 +116,7 @@ body{
                 .branches{
                     display: flex;
                     justify-content: space-between;
+                    padding-left: 4px;
                     ul{
                         display: flex;
                         justify-content: space-between;
@@ -128,36 +128,39 @@ body{
                     li{
                         font-size: 18px;
                         color: #495057;
+                        
                     }
+                    .filter{
+                        padding: 2%;
+                            font-size: 10px;
+                        }
                 }
             }
             .location{
+                display: flex;
                 
-                .測試{
-                    
-                }
+                .location1{
+                    box-sizing: content-box;
+                    padding-right: 1.88%;
+                    max-width: 41.35%;
                 .branch1{
                     font-size: 24px;
                     padding-top: 1%;
                     padding-bottom: 1%;
                     padding-left: 2%;
-                    border: 2px lightgray solid;
-                    max-width: 50%;
-                }
-                .imgBranch{
                     
+                    border: 2px lightgray solid;
+                    max-width:100%;
                 }
                 img{
-                    
-                
-                padding-top: 8px;
+                    max-width:100%;
                 }
                 ul{
                     border:2px lightgray solid;
                     border-top: none;
                     padding-left: 2%;
-                    padding-bottom: 2%;
-                    max-width: 50%;
+                    padding-bottom: 1%;
+                    max-width:100%;
                 }
                 .info{
                     font-size: 20px;
@@ -168,15 +171,16 @@ body{
                     }
                 }
             }
+                .map{
+                    img{
+                        max-width: 100%;
+                    }
+             
+        } 
+    }
             }
-        .map{
-            flex-direction: column;
-            img{
-                max-width: 100%;
-                
             }
-
-        }   
+          
         }
 
-    }
+    

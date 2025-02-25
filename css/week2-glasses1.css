@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -70,7 +69,7 @@ body .header img {
   padding-bottom: 12px;
 }
 body .header .menu {
-  width: 492px;
+  width: 45.35%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -95,7 +94,7 @@ body .content .branches-location {
   padding-right: 24px;
 }
 body .content .branches-location .branch-title {
-  width: 1070px;
+  width: 100%;
 }
 body .content .branches-location h2 {
   display: flex;
@@ -108,9 +107,8 @@ body .content .branches-location h2 {
   border-left: #9F1213 7px solid;
 }
 body .content .branches-location .branches-choose {
-  width: 400px;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 40px;
@@ -121,6 +119,7 @@ body .content .branches-location .branches-choose .choose {
 body .content .branches-location .branches-choose .branches {
   display: flex;
   justify-content: space-between;
+  padding-left: 4px;
 }
 body .content .branches-location .branches-choose .branches ul {
   display: flex;
@@ -134,47 +133,44 @@ body .content .branches-location .branches-choose .branches li {
   font-size: 18px;
   color: #495057;
 }
+body .content .branches-location .branches-choose .branches .filter {
+  padding: 2%;
+  font-size: 10px;
+}
 body .content .branches-location .location {
   display: flex;
 }
-body .content .branches-location .location .測試 {
-  width: 50%;
+body .content .branches-location .location .location1 {
+  box-sizing: content-box;
+  padding-right: 1.88%;
+  max-width: 41.35%;
 }
-body .content .branches-location .location .branch1 {
+body .content .branches-location .location .location1 .branch1 {
   font-size: 24px;
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 2%;
   border: 2px lightgray solid;
-  max-width: 50%;
+  max-width: 100%;
 }
-body .content .branches-location .location .imgBranch {
-  display: block;
-  max-width: 50%;
-  padding-top: 8px;
+body .content .branches-location .location .location1 img {
+  max-width: 100%;
 }
-body .content .branches-location .location img {
-  max-width: 50%;
-  padding-top: 8px;
-}
-body .content .branches-location .location ul {
+body .content .branches-location .location .location1 ul {
   border: 2px lightgray solid;
   border-top: none;
   padding-left: 2%;
-  padding-bottom: 2%;
-  max-width: 50%;
+  padding-bottom: 1%;
+  max-width: 100%;
 }
-body .content .branches-location .location .info {
+body .content .branches-location .location .location1 .info {
   font-size: 20px;
   padding-top: 8px;
 }
-body .content .branches-location .location .info img {
+body .content .branches-location .location .location1 .info img {
   width: 20px;
   padding-right: 5px;
 }
-body .content .map {
-  flex-direction: column;
-}
-body .content .map img {
-  width: 50%;
-}/*# sourceMappingURL=week2-glasses - 1.css.map */
+body .content .branches-location .location .map img {
+  max-width: 100%;
+}/*# sourceMappingURL=week2-glasses1.css.map */
