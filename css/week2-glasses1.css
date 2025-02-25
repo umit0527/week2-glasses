@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -54,6 +55,9 @@ table {
   margin-left: 0 auto;
 }
 
+body {
+  font-family: "Noto Sans TC";
+}
 body .header {
   max-width: 1920px;
   height: 80px;
@@ -65,6 +69,7 @@ body .header {
   margin-bottom: 80px;
 }
 body .header img {
+  width: 80px;
   padding-top: 12px;
   padding-bottom: 12px;
 }
@@ -87,23 +92,20 @@ body .content {
   display: flex;
   padding-left: 16.25%;
   padding-right: 16.25%;
+  margin-bottom: 80px;
 }
 body .content .branches-location {
   display: flex;
   flex-direction: column;
-  padding-right: 24px;
-}
-body .content .branches-location .branch-title {
-  width: 100%;
 }
 body .content .branches-location h2 {
+  width: 100%;
+  font-size: 48px;
   display: flex;
-  width: 224px;
   padding-left: 16px;
   padding-top: 5px;
   padding-bottom: 5px;
-  font-size: 48px;
-  font-weight: bold;
+  font-weight: bolder;
   border-left: #9F1213 7px solid;
 }
 body .content .branches-location .branches-choose {
@@ -141,15 +143,14 @@ body .content .branches-location .location {
   display: flex;
 }
 body .content .branches-location .location .location1 {
-  box-sizing: content-box;
   padding-right: 1.88%;
   max-width: 41.35%;
 }
 body .content .branches-location .location .location1 .branch1 {
   font-size: 24px;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  padding-left: 2%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
   border: 2px lightgray solid;
   max-width: 100%;
 }
@@ -159,8 +160,9 @@ body .content .branches-location .location .location1 img {
 body .content .branches-location .location .location1 ul {
   border: 2px lightgray solid;
   border-top: none;
-  padding-left: 2%;
-  padding-bottom: 1%;
+  padding-top: 12px;
+  padding-left: 24px;
+  padding-bottom: 24px;
   max-width: 100%;
 }
 body .content .branches-location .location .location1 .info {
@@ -173,4 +175,86 @@ body .content .branches-location .location .location1 .info img {
 }
 body .content .branches-location .location .map img {
   max-width: 100%;
+}
+body .footer {
+  max-width: 1920px;
+  background-color: #9F1213;
+  padding-left: 16.25%;
+  padding-right: 16.25%;
+  height: 373px;
+}
+body .footer .footer-title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 4.68%;
+}
+body .footer .footer-title .menu {
+  width: 400px;
+  text-align: center;
+  color: white;
+}
+body .footer .footer-title .menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+body .footer .footer-title .menu ul li a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  justify-content: space-between;
+}
+body .footer .footer-title .conect-logo ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+body .footer .footer-title .conect-logo ul img {
+  width: 80%;
+}
+body .footer-info {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #CED4DA;
+}
+body .footer-info li {
+  color: white;
+  font-size: 36px;
+  padding-bottom: 8px;
+}
+body .footer-info a {
+  color: white;
+  text-decoration: none;
+  padding-right: 22px;
+  align-items: center;
+}
+body .footer-info a:hover {
+  color: #CED4DA;
+}
+body .footer-info .material-symbols-outlined {
+  padding-right: 10px;
+  width: 36px;
+}
+body .copyright {
+  color: white;
+  display: flex;
+  padding: 32px 0 32px 0;
+  justify-content: space-between;
+}
+body .copyright p {
+  font-size: 16px;
+}
+body .copyright .privacy {
+  display: flex;
+}
+body .copyright .privacy ul {
+  display: flex;
+  justify-content: space-between;
+  width: 170px;
+}
+body .copyright .privacy ul li a {
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+}
+body .copyright .privacy ul li a:hover {
+  color: #CED4DA;
 }/*# sourceMappingURL=week2-glasses1.css.map */
