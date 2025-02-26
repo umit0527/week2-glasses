@@ -598,10 +598,9 @@ body{
                 }
             }
             .footer{
-                max-width: 1920px;
                 background-color: #9F1213;
-                padding-left:16.25%;
-                padding-right:16.25%;
+                padding-left:4.82%;
+                padding-right:4.82% ;
                 height: 353px;
                 .footer-title{
                     display: flex;
@@ -611,7 +610,7 @@ body{
                     color: white;
                     display: flex;
                     align-items: center;
-                        width: 500px;
+                        width: 368px;
                         justify-content: space-between;
                         display: flex;
                         align-items: center;
@@ -624,16 +623,15 @@ body{
                     
                 }
                 }
-                .conect-logo{
+                .connect-logo{
                     ul{
-                        
                         display: flex;  
-                        width: 288px;
+                        width: 152px;
                         li{
                             text-align: right;
                         }
                     img{
-                        width:50%;
+                        width:79%;
                     }
                 }
                     
@@ -668,7 +666,7 @@ body{
                 .copyright{
                     color: white;
                     display: flex;
-                    padding: 32px 0 32px 0;
+                    padding: 40px 0 40px 0;
                     justify-content: space-between;
         
                     p{

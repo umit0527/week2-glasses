@@ -519,10 +519,9 @@ body .footer .copyright .privacy ul li a:hover {
     max-width: 100%;
   }
   body .footer {
-    max-width: 1920px;
     background-color: #9F1213;
-    padding-left: 16.25%;
-    padding-right: 16.25%;
+    padding-left: 4.82%;
+    padding-right: 4.82%;
     height: 353px;
   }
   body .footer .footer-title {
@@ -534,7 +533,7 @@ body .footer .copyright .privacy ul li a:hover {
     color: white;
     display: flex;
     align-items: center;
-    width: 500px;
+    width: 368px;
     justify-content: space-between;
     display: flex;
     align-items: center;
@@ -544,15 +543,15 @@ body .footer .copyright .privacy ul li a:hover {
     color: white;
     text-decoration: none;
   }
-  body .footer .footer-title .conect-logo ul {
+  body .footer .footer-title .connect-logo ul {
     display: flex;
-    width: 288px;
+    width: 152px;
   }
-  body .footer .footer-title .conect-logo ul li {
+  body .footer .footer-title .connect-logo ul li {
     text-align: right;
   }
-  body .footer .footer-title .conect-logo ul img {
-    width: 50%;
+  body .footer .footer-title .connect-logo ul img {
+    width: 79%;
   }
   body .footer .footer-info {
     padding-bottom: 20px;
@@ -581,7 +580,7 @@ body .footer .copyright .privacy ul li a:hover {
   body .footer .copyright {
     color: white;
     display: flex;
-    padding: 32px 0 32px 0;
+    padding: 40px 0 40px 0;
     justify-content: space-between;
   }
   body .footer .copyright p {
