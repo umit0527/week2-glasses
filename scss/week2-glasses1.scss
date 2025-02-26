@@ -116,28 +116,102 @@ body{
                 .choose{
                     font-size: 24px;
                 }
-                .branches{
-                    display: flex;
-                    justify-content: space-between;
-                    padding-left: 4px;
-                    ul{
-                        display: flex;
-                        justify-content: space-between;
-                        width: 250px;
-                        border: lightgray 1px solid;
-                        padding: 2%;
-                        margin-left:7px ;
-                    }
-                    li{
+                .drop {
+                    
+                    position: relative;
+                    display: block;
+                    width: 304px;
+
+                    padding-left: 10px;
+                    span{
                         font-size: 18px;
-                        color: #495057;
-                        
                     }
-                    .filter{
-                        padding: 2%;
-                            font-size: 10px;
+                    &:hover {
+                      .dropOption {
+                        display: block;
+                      }
+                    }
+                    &:hover {
+                      .dropdown {
+                        display: block;
+                      }
+                    }
+                    &:hover {
+                      .dropdown.close {
+                        display: none;
+                      }
+                    }
+                    .dropOption {
+                      position: relative;
+                      width: auto;
+                      color: #666;
+                      font-size: 18px;
+                      background-color: #fff;
+                      padding: 6px;
+                      border: 1px solid lightgray;
+                      border-radius: 2px;
+                      box-sizing: border-box;
+                      cursor: pointer;
+                      &::after {
+                        content: "";
+                        position: absolute;
+                        top: 12px;
+                        right: 12px;
+                        border-width: 8px 6px;
+                        border-style: solid;
+                        border-color: #000 transparent transparent transparent;
+                      }
+                    }
+                    .dropdown {
+                      display: none;
+                      width: 97%;
+                      max-height: 185px;
+                      position: absolute;
+                      color: #333;
+                      padding: 0;
+                      margin: 0;
+                      background-color: #f9f9f9;
+                      box-shadow: 0px 2px 3px 0px #ccc;
+                      border-radius: 2px;
+                      box-sizing: border-box;
+                      overflow: auto;
+                      z-index: 10;
+                      > li {
+                        display: block;
+                        color:#666;
+                        font-size: 18px;
+                        margin:  2px;
+                        padding: 5px;
+                        cursor: pointer;
+                        &:first-child {
                         }
-                }
+                        &:last-child {
+                          
+                        }
+                        &:hover {
+                          background-color: lighten(gray,40%);
+                          color: #333;
+                          border-radius: 2px;
+                          
+                        }
+                      }
+                      &::-webkit-scrollbar {
+                        width: 15px;
+                      }
+                      &::-webkit-scrollbar-track {
+                        background-color: #eee;
+                        border-radius: 2px;
+                      }
+                      &::-webkit-scrollbar-thumb {
+                        background-color: #888;
+                        &:active{
+                            background-color: #777;
+                        }
+                        border-radius: 5px;
+                      }
+                      
+                    }
+                  }
             }
             .location{
                 display: flex;
