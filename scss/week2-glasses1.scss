@@ -217,10 +217,9 @@ body{
             }
             .location{
                 display: flex;
-                
+                justify-content: space-between;
                 .location1{
                     
-                    padding-right: 1.87%;
                     max-width: 42.92%;
                     
                 .branch1{
@@ -235,26 +234,32 @@ body{
                     
                 }
                 img{
-                    max-width:100%;
+                    max-width:95.5%;
                     
                 }
                 .info{
+                    max-width: 95.5%;
                     ul{
                         border:2px lightgray solid;
                         border-top: none;
                         padding-top: 16px;
                         padding-left: 24px;
                         padding-bottom: 16px;
-                        max-width:108%;
-                        .material-symbols-outlined{
-                            width: 18px;
-  
-                            padding-right: 30px;
+                        max-width:100%;
+                        
+                        .info-phone,.info-mail,.info-address{
+                            display: flex;
+                            .material-symbols-outlined{
+                                width: 18px;
+                                padding-top: 10px;
+                                padding-right: 30px;
+                            }
+                            li{
+                                padding-top: 7px;
+                                font-size: 20px;
+                            }
                         }
-                        li{
-                            padding-top: 7px;
-                            font-size: 20px;
-                        }
+                        
                 
                     }
                 }
@@ -277,32 +282,34 @@ body{
         .footer-title{
             display: flex;
             justify-content: space-between;
-            padding-top: 4.68%;
+            padding-top: 48px;
         .menu{
-            
             color: white;
             display: flex;
-            ul{
+            align-items: center;
+                width: 500px;
+                justify-content: space-between;
                 display: flex;
-                max-width: 600px;
-            
+                align-items: center;
             li{
-                width: 600px;
                 a{
                     font-size: 16px;
                     color: white; 
                     text-decoration: none;
                     }
-            }
+            
         }
         }
         .conect-logo{
             ul{
-                width:200px;
-                display: flex;
-                justify-content: space-between;
+                
+                display: flex;  
+                width: 288px;
+                li{
+                    text-align: right;
+                }
             img{
-               width:80%; 
+                width:50%;
             }
         }
             
@@ -316,13 +323,14 @@ body{
                 color: white;
                 font-size: 36px;
                 padding-bottom: 8px;
-                padding-top: 16px;
+                padding-top: 24px;
             }
             a{
                 color: white;
                 text-decoration: none;
                 padding-right: 22px;
                 align-items: center;
+                
                 &:hover{
                     color: #CED4DA;
                 }
@@ -368,13 +376,13 @@ body{
 
         @media (max-width: 768px){
             .header{
-                max-width: 1920px;
+                  
                 height: 80px;
                 display: flex;
                 justify-content: space-between;
                 background-color: #9F1213;
-                padding-left:2.15%;
-                padding-right:2.15%;
+                padding-left:4.82%;
+                padding-right:4.82%;
                 margin-bottom: 80px;
                 
             
@@ -403,8 +411,8 @@ body{
 
             .content{
                 display: flex;
-                padding-left:16.25%;
-                padding-right:16.25%;
+                padding-left:4.82%;
+                padding-right:4.82%;
                 margin-bottom: 80px;
                 .branches-location{
                     display: flex;
@@ -531,12 +539,11 @@ body{
                     }
                     .location{
                         display: flex;
-                        
+                        flex-direction: column;
                         .location1{
-                            
-                            padding-right: 1.87%;
-                            max-width: 42.92%;
-                            
+                            display: flex;
+                            max-width: 100%;
+                            padding-bottom: 24px;
                         .branch1{
                            
                             font-size: 24px;
@@ -549,26 +556,34 @@ body{
                             
                         }
                         img{
-                            max-width:100%;
+                            max-width:51%;
+                            padding-right: 3.63%;
                             
                         }
                         .info{
+                            max-width: 95.5%;
                             ul{
                                 border:2px lightgray solid;
                                 border-top: none;
                                 padding-top: 16px;
                                 padding-left: 24px;
+                                
                                 padding-bottom: 16px;
-                                max-width:108%;
-                                .material-symbols-outlined{
-                                    width: 18px;
-          
-                                    padding-right: 30px;
+                                max-width:100%;
+                                
+                                .info-phone,.info-mail,.info-address{
+                                    display: flex;
+                                    .material-symbols-outlined{
+                                        width: 18px;
+                                        padding-top: 10px;
+                                        padding-right: 30px;
+                                    }
+                                    li{
+                                        padding-top: 7px;
+                                        font-size: 20px;
+                                    }
                                 }
-                                li{
-                                    padding-top: 7px;
-                                    font-size: 20px;
-                                }
+                                
                         
                             }
                         }
@@ -579,6 +594,106 @@ body{
                             }
                      
                         } 
+                    }
+                }
+            }
+            .footer{
+                max-width: 1920px;
+                background-color: #9F1213;
+                padding-left:16.25%;
+                padding-right:16.25%;
+                height: 353px;
+                .footer-title{
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: 48px;
+                .menu{
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                        width: 500px;
+                        justify-content: space-between;
+                        display: flex;
+                        align-items: center;
+                    li{
+                        a{
+                            font-size: 16px;
+                            color: white; 
+                            text-decoration: none;
+                            }
+                    
+                }
+                }
+                .conect-logo{
+                    ul{
+                        
+                        display: flex;  
+                        width: 288px;
+                        li{
+                            text-align: right;
+                        }
+                    img{
+                        width:50%;
+                    }
+                }
+                    
+                }
+                }
+            
+                .footer-info{
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid #CED4DA;
+                    li{
+                        color: white;
+                        font-size: 36px;
+                        padding-bottom: 8px;
+                        padding-top: 24px;
+                    }
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        padding-right: 22px;
+                        align-items: center;
+                        
+                        &:hover{
+                            color: #CED4DA;
+                        }
+                    }
+                    .material-symbols-outlined{
+                        padding-right: 10px;
+                        padding-bottom: 8px;
+                        font-size: 36px;
+                    }
+                }
+                .copyright{
+                    color: white;
+                    display: flex;
+                    padding: 32px 0 32px 0;
+                    justify-content: space-between;
+        
+                    p{
+                        font-size: 16px;
+                    }
+        
+                    .privacy{
+                        display: flex;
+                        
+                        
+                        ul{
+                            display: flex;
+                            justify-content: space-between;
+                            width: 170px;
+                            li{
+                                a{
+                                    color: white;
+                                    font-size: 14px;
+                                    text-decoration: none;
+                                    &:hover{
+                                        color: #CED4DA;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
