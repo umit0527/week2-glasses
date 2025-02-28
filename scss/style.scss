@@ -72,7 +72,7 @@ body{
         .header-menu{
             display: flex;
             justify-content: space-between;
-            width: 1300px;
+            width: 1280px;
             
             //品牌logo 
             img{
@@ -84,7 +84,7 @@ body{
 
             // ul
             .menu{
-                width:450px;
+                width:500px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -190,19 +190,24 @@ body{
                             border:2px lightgray solid;
                             border-top: none;
                             padding-left: 24px;
-                            padding-bottom: 17px;
+                            padding-bottom: 0px;
                             max-width:100%;
-                            .info-phone,.info-openhour,.info-address{
+                            height: 140px;
+                            .info-phone,.info-openhour,.info-address{                           
                                 display: flex;
-                                    .material-symbols-outlined{
+                                padding-top: 5px;
+                                .material-symbols-outlined{
+                                    display: flex;
                                     width: 18px;
                                     padding-top: 10px;
                                     padding-right: 30px;
                                 }
                                 li{
-                                    padding-top: 17px;
-                                    font-size: 20px;
-                                    }
+                                    display: flex;
+                                    align-items: center;
+                                    padding-top: 8px;
+                                    font-size: 20px;     
+                                }
                             }   
                         }
                     }
@@ -448,20 +453,19 @@ body{
                         ul{
                             border:2px lightgray solid;
                             border-top: none;
-                            padding-top: 16px;
                             padding-left: 24px;
-                            padding-bottom: 16px;
+                            padding-bottom: 0px;
                             max-width:100%;
-                            .info-phone,.info-openhour,.info-address{
-                                display: flex;
-                                padding:5px 0 0 0 ;
+                            .info-phone,.info-openhour,.info-address{                           
                                 .material-symbols-outlined{
                                     width: 18px;
                                     padding-top: 10px;
                                     padding-right: 30px;
                                 }
                                 li{
-                                    padding-top: 7px;
+                                    display: flex;
+                                    align-items: center;
+                                    padding-top: 8px;
                                     font-size: 20px;     
                                 }
                                 // 獨立包裝logo，使文字斷行能夠對齊
@@ -693,7 +697,7 @@ body{
 
                     // 選單
                     select{
-                        width: 276px;
+                        width:80%;
                         height: 38px;
                         padding-left: 10px;
                         font-size: 18px;
@@ -743,23 +747,25 @@ body{
                             ul{
                                 border:2px lightgray solid;
                                 border-top: none;
-                                padding-top: 16px;
-                                padding-left: 24px; 
+                                padding-left: 24px;
                                 padding-bottom: 16px;
+                                padding-top: 4px;
                                 max-width:100%;
-                                .info-phone,.info-openhour,.info-address{
-                                    display: flex;
+                                height: 168px;
+                                .info-phone,.info-openhour,.info-address{                           
+                                    padding-top: 8px;
+                                    
                                     .material-symbols-outlined{
                                         width: 18px;
-                                        padding-top: 10px;
+                                        padding-top: 8px;
                                         padding-right: 30px;
+                                        
                                     }
                                     li{
-                                        padding-top: 7px;
-                                        font-size: 20px;
-                                        .info-logo{
-                                            line-height: 2px;
-                                        }
+                                        display: flex;
+                                        align-items: center;
+                                        padding-top: 5px;
+                                        font-size: 20px;     
                                     }
                                 }
                             }
