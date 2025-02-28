@@ -54,10 +54,11 @@ table {
 }
 
 body{
-    font-family: "Noto Sans TC","Roboto"; 
+    font-family: "Noto Sans TC","Roboto";
+    max-width: 1920px; 
     // 表頭
     .header{
-        max-width: 1920px;
+        width: 100%;
         height: 80px;
         display: flex;
         justify-content: space-between;
@@ -70,9 +71,10 @@ body{
         
         // 菜單與導覽列
         .header-menu{
+            width: 100%;
             display: flex;
             justify-content: space-between;
-            width: 1280px;
+            
             
             //品牌logo 
             img{
@@ -84,7 +86,7 @@ body{
 
             // ul
             .menu{
-                width:500px;
+                width:40%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -325,6 +327,7 @@ body{
 @media (max-width: 768px){
     // 表頭
     .header{ 
+        max-width: 100%;
         height: 80px;
         display: flex;
         justify-content: space-between;
@@ -337,7 +340,7 @@ body{
         .header-menu{
             display: flex;
             justify-content: space-between;
-            width: 700px;
+            width: 670px;
 
             //品牌logo
             img{
@@ -349,7 +352,7 @@ body{
 
             // ul
             .menu{
-                width:510px;
+                width:68%;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
@@ -456,6 +459,7 @@ body{
                             padding-left: 24px;
                             padding-bottom: 0px;
                             max-width:100%;
+                            height: 168px;
                             .info-phone,.info-openhour,.info-address{                           
                                 .material-symbols-outlined{
                                     width: 18px;
