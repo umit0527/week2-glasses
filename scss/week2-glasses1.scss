@@ -41,8 +41,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
+// 導入字體
+// 中文-思源 noto sans
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+// 英文-roboto 
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 
 *,*:before,*:after{
@@ -51,9 +53,9 @@ table {
     margin-left: 0 auto;
 }
 
-
 body{
-    font-family: "Noto Sans TC","Roboto";
+    font-family: "Noto Sans TC","Roboto"; 
+    // 表頭
     .header{
         max-width: 1920px;
         height: 80px;
@@ -63,27 +65,31 @@ body{
         padding-left:16.25%;
         padding-right:16.25%;
         margin-bottom: 80px;
+        position:fixed;
+        z-index: 11;
         
+        // 菜單與導覽列
         .header-menu{
             display: flex;
             justify-content: space-between;
-            width: 1100px;
+            width: 1300px;
+            
+            //品牌logo 
             img{
                 display: flex;
                 width: 80px;
                 padding-top: 12px;
                 padding-bottom: 12px;
-
             }
+
             // ul
             .menu{
                 width:450px;
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                color: white;
+                color: white;  
                 
-                    
                 li{
                     font-size: 20px;
                     text-align: center;
@@ -93,47 +99,50 @@ body{
                     }
                 } 
             }
-        }
-        
+        } 
     }
 
+    // 主要內容
     .content{
         display: flex;
         padding-left:16.25%;
         padding-right:16.25%;
         margin-bottom: 80px;
+
+        //門市據點.資訊與地圖
         .branches-location{
             display: flex;
             flex-direction: column;
-            
-            
             h2{
+                margin-top: 160px;
                 width: 100%;
                 font-size: 48px;
                 display: flex;
                 padding-left: 16px;
                 padding-top:5px;
                 padding-bottom:5px;
-                
                 font-weight: bolder ;
                 border-left: #9F1213 7px solid;
             }
-            
+
+            // 選擇分店
             .branches-choose{
                 width:100%;
                 display: flex;
                 align-items: center;
                 padding-top: 32px;
                 padding-bottom:40px;
+
+                // 選擇分店-p
                 .choose{
                     font-size: 24px;
                 }
+
+                //下拉式選單
                 .drop {
-                    
                     position: relative;
                     display: block;
                     width: 304px;
-
                     padding-left: 10px;
                     span{
                         font-size: 18px;
@@ -174,121 +183,133 @@ body{
                         border-color: #000 transparent transparent transparent;
                       }
                     }
+
+                    // 門市清單
                     .dropdown {
-                      display: none;
-                      width: 97%;
-                      max-height: 185px;
-                      position: absolute;
-                      color: #333;
-                      padding: 0;
-                      margin: 0;
-                      background-color: #f9f9f9;
-                      box-shadow: 0px 2px 3px 0px #ccc;
-                      border-radius: 2px;
-                      box-sizing: border-box;
-                      overflow: auto;
-                      z-index: 10;
-                      > li {
-                        display: block;
-                        color:#666;
-                        font-size: 18px;
-                        margin:  2px;
-                        padding: 5px;
-                        cursor: pointer;
-                        &:first-child {
-                        }
-                        &:last-child {
-                          
-                        }
-                        &:active {
-                          background-color: lighten(gray,40%);
-                          color: #333;
-                          border-radius: 2px;
-                          
-                        }
-                      }
-                      &::-webkit-scrollbar {
-                        width: 15px;
-                      }
-                      &::-webkit-scrollbar-track {
-                        background-color: #eee;
+                        display: none;
+                        width: 97%;
+                        max-height: 185px;
+                        position: absolute;
+                        color: #333;
+                        padding: 0;
+                        margin: 0;
+                        background-color: #f9f9f9;
+                        box-shadow: 0px 2px 3px 0px #ccc;
                         border-radius: 2px;
-                      }
-                      &::-webkit-scrollbar-thumb {
-                        background-color: #888;
-                        &:active{
-                            background-color: #777;
+                        box-sizing: border-box;
+                        overflow: auto;
+                        z-index: 9;
+                        // 清單樣式
+                        > li {
+                            display: block;
+                            color:#666;
+                            font-size: 18px;
+                            margin:  2px;
+                            padding: 5px;
+                            cursor: pointer;
+                            &:first-child {
+                            }
+                            &:last-child {
+                            }
+                            &:hover {
+                            background-color: lighten(gray,40%);
+                            color: #333;
+                            border-radius: 2px;
+                            }
                         }
-                        border-radius: 5px;
-                      }
-                      
+                        // 滑鼠軌道
+                        &::-webkit-scrollbar {
+                            width: 15px;
+                        }
+                        &::-webkit-scrollbar-track {
+                            background-color: #eee;
+                            border-radius: 2px;
+                        }
+                        &::-webkit-scrollbar-thumb {
+                            background-color: #888;
+                            &:active{
+                                background-color: #777;
+                            }
+                            border-radius: 5px;
+                            }  
+                        }
                     }
-                  }
             }
+
+            // 資訊與地圖
             .location{
                 display: flex;
                 justify-content: space-between;
-                .location1{
                     
+                // 門市照片與資訊
+                .location-info{
                     max-width: 42.92%;
-                    
-                .branch1{
-                    font-size: 24px;
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    padding-left: 24px;
-                    border: 2px lightgray solid;
-                    border-bottom: 3px lightgray solid;
-                    max-width:100%;
-                }
-                img{
-                    max-width:95.5%;
-                    
-                }
-                .info{
-                    max-width: 95.5%;
-                    ul{
-                        border:2px lightgray solid;
-                        border-top: none;
-                        padding-left: 24px;
-                        padding-bottom: 17px;
-                        max-width:100%;
-                        .info-phone,.info-openhour,.info-address{
-                            display: flex;
-                            .material-symbols-outlined{
-                                width: 18px;
-                                padding-top: 10px;
-                                padding-right: 30px;
-                            }
-                            li{
-                                padding-top: 17px;
-                                font-size: 20px;
-                            }
-                        }
                         
-                
+                    //門市照片
+                    img{
+                        max-width:95.5%; 
+                    }
+
+                    // 門市資訊
+                    .info{
+                        max-width: 95.5%;
+                        .branch-name{
+                            font-size: 24px;
+                            padding-top: 10px;
+                            padding-bottom: 10px;
+                            padding-left: 24px;
+                            border: 2px lightgray solid;
+                            border-bottom: 3px lightgray solid;
+                            max-width:100%;
+                        }
+
+                        // 詳細資訊 
+                        ul{
+                            border:2px lightgray solid;
+                            border-top: none;
+                            padding-left: 24px;
+                            padding-bottom: 17px;
+                            max-width:100%;
+                            .info-phone,.info-openhour,.info-address{
+                                display: flex;
+                                    .material-symbols-outlined{
+                                    width: 18px;
+                                    padding-top: 10px;
+                                    padding-right: 30px;
+                                }
+                                li{
+                                    padding-top: 17px;
+                                    font-size: 20px;
+                                    }
+                            }   
+                        }
                     }
                 }
-            }
+
+                // 門市地圖
                 .map{
                     img{
                         max-width: 100%;
                     }
-             
                 } 
             }
         }
     }
+
+    // 表尾
     .footer{
         max-width: 1920px;
         background-color: #9F1213;
         padding-left:16.25%;
         padding-right:16.25%;
 
+        // 菜單/導覽列與社群
         .footer-title{
             display: flex;
             justify-content: space-between;
             padding-top: 48px;
+            
+            //ul:菜單/導覽列
             .menu{
                 color: white;
                 display: flex;
@@ -301,27 +322,28 @@ body{
                         font-size: 16px;
                         color: white; 
                         text-decoration: none;
-                        }
-                
+                    }
                 }
             }
+
+            // 社群
             .connect-logo{
                 display: flex;
-                        ul{
-                            display: flex;
-                            width: 288px;
-                            li{
-                                display: flex;
-                                text-align: right;
-                            }
-                            img{
-                                width:50%;
-                            }
-                        }
-                
+                ul{
+                    display: flex;
+                    width: 288px;
+                    li{
+                        display: flex;
+                        text-align: right;
+                    }
+                    img{
+                        width:50%;
+                    }
+                }
             }
         }
     
+        // 品牌資訊
         .footer-info{
             padding-bottom: 20px;
             border-bottom: 1px solid #CED4DA;
@@ -336,31 +358,30 @@ body{
                 text-decoration: none;
                 padding-right: 22px;
                 align-items: center;
-                
                 &:hover{
                     color: #CED4DA;
                 }
             }
+
+            //icon-電話.信箱
             .material-symbols-outlined{
                 padding-right: 10px;
                 padding-bottom: 8px;
                 font-size: 36px;
             }
         }
+
+        //隱私權與服務條款
         .copyright{
             color: white;
             display: flex;
             padding: 32px 0 32px 0;
             justify-content: space-between;
-
             p{
                 font-size: 16px;
             }
-
             .privacy{
                 display: flex;
-                
-                
                 ul{
                     display: flex;
                     justify-content: space-between;
@@ -382,6 +403,7 @@ body{
 
 // 手機768px
 @media (max-width: 768px){
+    // 表頭
     .header{ 
         height: 80px;
         display: flex;
@@ -390,17 +412,21 @@ body{
         padding-left:4.82%;
         padding-right:4.82%;
         margin-bottom: 80px;
+
+        // 菜單與導覽列
         .header-menu{
             display: flex;
             justify-content: space-between;
-            width: 675px;
+            width: 700px;
+
+            //品牌logo
             img{
                 display: flex;
                 width: 80px;
                 padding-top: 12px;
                 padding-bottom: 12px;
-
             }
+
             // ul
             .menu{
                 width:510px;
@@ -420,16 +446,17 @@ body{
         }
     }
 
+    // 主要內容
     .content{
         display: flex;
         padding-left:4.82%;
         padding-right:4.82%;
         margin-bottom: 80px;
+
+        //門市據點.資訊與地圖
         .branches-location{
             display: flex;
             flex-direction: column;
-            
-            
             h2{
                 width: 100%;
                 font-size: 48px;
@@ -437,26 +464,28 @@ body{
                 padding-left: 16px;
                 padding-top:5px;
                 padding-bottom:5px;
-                
                 font-weight: bolder ;
                 border-left: #9F1213 7px solid;
             }
             
+            // 選擇分店
             .branches-choose{
                 width:100%;
                 display: flex;
                 align-items: center;
                 padding-top: 32px;
                 padding-bottom:40px;
+
+                // 選擇分店-p
                 .choose{
                     font-size: 24px;
                 }
+
+                //下拉式選單
                 .drop {
-                    
                     position: relative;
                     display: block;
                     width: 304px;
-
                     padding-left: 10px;
                     span{
                         font-size: 18px;
@@ -497,6 +526,8 @@ body{
                         border-color: #000 transparent transparent transparent;
                       }
                     }
+
+                    // 門市清單
                     .dropdown {
                       display: none;
                       width: 97%;
@@ -511,6 +542,7 @@ body{
                       box-sizing: border-box;
                       overflow: auto;
                       z-index: 10;
+                      // 清單樣式
                       > li {
                         display: block;
                         color:#666;
@@ -530,6 +562,7 @@ body{
                           
                         }
                       }
+                      // 滑鼠軌道
                       &::-webkit-scrollbar {
                         width: 15px;
                       }
@@ -539,119 +572,129 @@ body{
                       }
                       &::-webkit-scrollbar-thumb {
                         background-color: #888;
-                        &:active{
+                        &:hover{
                             background-color: #777;
                         }
                         border-radius: 5px;
                       }
                       
                     }
-                  }
+                }
             }
+
+            // 資訊與地圖
             .location{
                 display: flex;
                 flex-direction: column;
-                .location1{
+
+                // 門市照片與資訊
+                .location-info{
                     display: flex;
                     max-width: 100%;
                     padding-bottom: 24px;
-                .branch1{
-                   
-                    font-size: 24px;
-                    padding-top: 8px;
-                    padding-bottom: 8px;
-                    padding-left: 24px;
-                    border: 2px lightgray solid;
-                    border-bottom: 3px lightgray solid;
-                    max-width:100%;
-                    
-                }
-                img{
-                    max-width:51%;
-                    padding-right: 3.63%;
-                    
-                }
-                .info{
-                    max-width: 95.5%;
-                    ul{
-                        border:2px lightgray solid;
-                        border-top: none;
-                        padding-top: 16px;
-                        padding-left: 24px;
-                        
-                        padding-bottom: 16px;
-                        max-width:100%;
-                        
-                        .info-phone,.info-openhour,.info-address{
-                            display: flex;
-                            padding:5px 0 0 0 ;
-                            .material-symbols-outlined{
-                                width: 18px;
-                                padding-top: 10px;
-                                padding-right: 30px;
-                            }
-                            li{
-                                padding-top: 7px;
-                                font-size: 20px;
-                                
-                            }.info-logo{
-                                    line-height: 30px;
-                                }
+                    img{
+                        max-width:51%;
+                        padding-right: 3.63%;    
+                    }
+
+                    // 門市資訊                 
+                    .info{
+                        max-width: 95.5%;
+                        .branch-name{
+                            font-size: 24px;
+                            padding-top: 8px;
+                            padding-bottom: 8px;
+                            padding-left: 24px;
+                            border: 2px lightgray solid;
+                            border-bottom: 3px lightgray solid;
+                            max-width:100%;    
                         }
-                        
-                
+
+                        // 詳細資訊
+                        ul{
+                            border:2px lightgray solid;
+                            border-top: none;
+                            padding-top: 16px;
+                            padding-left: 24px;
+                            padding-bottom: 16px;
+                            max-width:100%;
+                            .info-phone,.info-openhour,.info-address{
+                                display: flex;
+                                padding:5px 0 0 0 ;
+                                .material-symbols-outlined{
+                                    width: 18px;
+                                    padding-top: 10px;
+                                    padding-right: 30px;
+                                }
+                                li{
+                                    padding-top: 7px;
+                                    font-size: 20px;     
+                                }
+                                // 獨立包裝logo，使文字斷行能夠對齊
+                                .info-logo{
+                                        line-height: 30px;
+                                    }
+                            }
+                        }
                     }
                 }
-            }
+
+                // 門市地圖
                 .map{
                     img{
                         max-width: 100%;
                     }
-             
                 } 
             }
         }
     }
+
+    // 表尾
     .footer{
         background-color: #9F1213;
         padding-left:4.82%;
         padding-right:4.82% ;
+
+        // 菜單/導覽列與社群
         .footer-title{
             display: flex;
             justify-content: space-between;
             padding-top: 48px;
-        .menu{
-            color: white;
-            display: flex;
-            align-items: center;
+
+            //ul:菜單/導覽列
+            .menu{
+                color: white;
+                display: flex;
+                align-items: center;
                 width: 368px;
                 justify-content: space-between;
                 display: flex;
                 align-items: center;
-            li{
-                a{
-                    font-size: 16px;
-                    color: white; 
-                    text-decoration: none;
-                    }
-            
-        }
-        }
-        .connect-logo{
-            ul{
-                display: flex;  
-                width: 152px;
                 li{
-                    text-align: right;
+                    a{
+                        font-size: 16px;
+                        color: white; 
+                        text-decoration: none;
+                    }
                 }
-            img{
-                width:79%;
+            }
+
+            // 社群
+            .connect-logo{
+                ul{
+                    display: flex;  
+                    width: 152px;
+                    li{
+                        text-align: right;
+                    }
+                    img{
+                        width:79%;
+                    }
+                }   
             }
         }
-            
-        }
-        }
     
+        // 品牌資訊
         .footer-info{
             padding-bottom: 20px;
             border-bottom: 1px solid #CED4DA;
@@ -665,32 +708,31 @@ body{
                 color: white;
                 text-decoration: none;
                 padding-right: 22px;
-                align-items: center;
-                
+                align-items: center; 
                 &:hover{
                     color: #CED4DA;
                 }
             }
+
+            //icon-電話.信箱
             .material-symbols-outlined{
                 padding-right: 10px;
                 padding-bottom: 8px;
                 font-size: 36px;
             }
         }
+
+        //隱私權與服務條款
         .copyright{
             color: white;
             display: flex;
             padding: 40px 0 40px 0;
             justify-content: space-between;
-
             p{
                 font-size: 16px;
             }
-
             .privacy{
                 display: flex;
-                
-                
                 ul{
                     display: flex;
                     justify-content: space-between;
@@ -710,8 +752,10 @@ body{
         }
     }
 }
+
 //手機375 
 @media (max-width: 376px){
+    // 表頭
     .header{ 
         max-width: 100%;
         height: 160px;
@@ -720,56 +764,74 @@ body{
         background-color: #9F1213;
         padding-left:0%;
         padding-right:0;
-        margin-bottom: 40px;
+        margin-bottom: 0px;
+        position:static; //覆蓋父層設定
+        z-index: 0; //覆蓋父層設定
+
+        // 菜單與導覽列
         .header-menu{
             display: flex;
             flex-direction: column;
             width: 375px;
             height: 80px;
-            img{
-                padding-left:4.24%;
-                display: flex;
-                width: 80px;
-                padding-top: 15px;
-                padding-bottom: 15px;
-                }
-            // ul
-                .menu{
-                    width:100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    align-items: center;
-                    color: white;  
-                    flex-wrap: wrap;
-                    li{
+            
+            .header-logo{
+                a{
+                    background-color: #9F1213;
+                    width: 375px;
+                    position:fixed;
+                    z-index: 10;
+                
+                    //品牌logo 
+                    img{
+                        padding-left:4.24%;
                         display: flex;
-                        width: 50%;
-                        height: 48px;
-                        border: 1px white solid;
-                        font-size: 16px;
-                        align-items: center;
-                        justify-content: center;
-                        
-                        a{
-                        color: white; 
-                        text-decoration: none;
-                        }
-                    } 
+                        width: 80px;
+                        padding-top: 15px;
+                        padding-bottom: 15px;   
+                    }
                 }
             }
+
+            // ul
+            .menu{
+                width:100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                color: white;  
+                flex-wrap: wrap;
+                margin-top: 70px;
+                li{
+                    display: flex;
+                    width: 50%;
+                    height: 48px;
+                    border: 1px white solid;
+                    font-size: 16px;
+                    align-items: center;
+                    justify-content: center;
+                    a{
+                    color: white; 
+                    text-decoration: none;
+                    }
+                } 
+            }
         }
+    }
     
+        // 主要內容
         .content{
             display: flex;
             padding-left:3.65%;
             padding-right:3.65%;
-            margin-bottom: 64px;
+            margin-bottom: 0px;
+
+            //門市據點.資訊與地圖
             .branches-location{
                 display: flex;
-                flex-direction: column;
-                
-                
+                flex-direction: column;            
                 h2{
+                    margin-top: 40px;
                     width: 100%;
                     font-size: 24px;
                     display: flex;
@@ -781,6 +843,7 @@ body{
                     border-left: #9F1213 7px solid;
                 }
                 
+                // 選擇分店
                 .branches-choose{
                     width:100%;
                     display: flex;
@@ -789,192 +852,205 @@ body{
                     padding-top: 32px;
                     padding-bottom:40px;
                     
+                    // 選擇分店-p
                     .choose{
                         font-size: 16px;
                     }
+
+                    //下拉式選單
                     .drop {
                         position: relative;
                         display: block;
                         width: 260px;
-    
                         padding-left: 0px;
                         span{
                             font-size: 18px;
                         }
                         &:hover {
-                          .dropOption {
-                            display: block;
-                          }
+                            .dropOption {
+                                display: block;
+                            }
                         }
                         &:hover {
-                          .dropdown {
-                            display: block;
-                          }
+                            .dropdown {
+                                display: block;
+                            }
                         }
                         &:hover {
-                          .dropdown.close {
-                            display: none;
-                          }
+                            .dropdown.close {
+                                display: none;
+                            }
                         }
                         .dropOption {
-                          position: relative;
-                          width: auto;
-                          color: #666;
-                          font-size: 18px;
-                          background-color: #fff;
-                          padding: 6px;
-                          border: 1px solid lightgray;
-                          border-radius: 2px;
-                          box-sizing: border-box;
-                          cursor: pointer;
-                          &::after {
-                            content: "";
-                            position: absolute;
-                            top: 12px;
-                            right: 12px;
-                            border-width: 8px 6px;
-                            border-style: solid;
-                            border-color: #000 transparent transparent transparent;
-                          }
-                        }
-                        .dropdown {
-                          display: none;
-                          width: 97%;
-                          max-height: 185px;
-                          position: absolute;
-                          color: #333;
-                          padding: 0;
-                          margin: 0;
-                          background-color: #f9f9f9;
-                          box-shadow: 0px 2px 3px 0px #ccc;
-                          border-radius: 2px;
-                          box-sizing: border-box;
-                          overflow: auto;
-                          z-index: 10;
-                          > li {
-                            display: block;
-                            color:#666;
+                            position: relative;
+                            width: auto;
+                            color: #666;
                             font-size: 18px;
-                            margin:  2px;
-                            padding: 5px;
-                            cursor: pointer;
-                            &:first-child {
-                            }
-                            &:last-child {
-                              
-                            }
-                            &:hover {
-                              background-color: lighten(gray,40%);
-                              color: #333;
-                              border-radius: 2px;
-                              
-                            }
-                          }
-                          &::-webkit-scrollbar {
-                            width: 15px;
-                          }
-                          &::-webkit-scrollbar-track {
-                            background-color: #eee;
+                            background-color: #fff;
+                            padding: 6px;
+                            border: 1px solid lightgray;
                             border-radius: 2px;
-                          }
-                          &::-webkit-scrollbar-thumb {
-                            background-color: #888;
-                            &:active{
-                                background-color: #777;
+                            box-sizing: border-box;
+                            cursor: pointer;
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 12px;
+                                right: 12px;
+                                border-width: 8px 6px;
+                                border-style: solid;
+                                border-color: #000 transparent transparent transparent;
                             }
-                            border-radius: 5px;
-                          }
-                          
                         }
-                      }
+
+                        // 門市清單
+                        .dropdown {
+                            display: none;
+                            width: 97%;
+                            max-height: 185px;
+                            position: absolute;
+                            color: #333;
+                            padding: 0;
+                            margin: 0;
+                            background-color: #f9f9f9;
+                            box-shadow: 0px 2px 3px 0px #ccc;
+                            border-radius: 2px;
+                            box-sizing: border-box;
+                            overflow: auto;
+                            z-index: 10; 
+                            // 清單樣式
+                            > li {
+                                display: block;
+                                color:#666;
+                                font-size: 18px;
+                                margin:  2px;
+                                padding: 5px;
+                                cursor: pointer;
+                                &:first-child {
+                                }
+                                &:last-child {
+                                }
+                                &:hover {
+                                    background-color: lighten(gray,40%);
+                                    color: #333;
+                                    border-radius: 2px;
+                                }
+                            }
+                            // 滑鼠軌道
+                            &::-webkit-scrollbar {
+                                width: 15px;
+                            }
+                            &::-webkit-scrollbar-track {
+                                background-color: #eee;
+                                border-radius: 2px;
+                            }
+                            &::-webkit-scrollbar-thumb {
+                                background-color: #888;
+                                &:active{
+                                    background-color: #777;
+                                }
+                                border-radius: 5px;
+                            }
+                        }
+                    }
                 }
+
+                // 資訊與地圖
                 .location{
                     display: flex;
                     flex-direction: column;
-                    .location1{
+                    .location-info{
+
+                        //門市照片
+                        img{
+                            max-width:100%;
+                            padding-right: 0%; 
+                        }
                         display: flex;
                         flex-direction: column;
                         max-width: 100%;
                         padding-bottom: 24px;
-                    .branch1{
-                        font-size: 24px;
-                        padding-top: 8px;
-                        padding-bottom: 8px;
-                        padding-left: 24px;
-                        border: 2px lightgray solid;
-                        border-bottom: 3px lightgray solid;
-                        max-width:100%;
                         
-                    }
-                    img{
-                        max-width:100%;
-                        padding-right: 0%;
-                        
-                    }
-                    .info{
-                        max-width: 100%;
-                        ul{
-                            border:2px lightgray solid;
-                            border-top: none;
-                            padding-top: 16px;
-                            padding-left: 24px;
-                            
-                            padding-bottom: 16px;
-                            max-width:100%;
-                            
-                            .info-phone,.info-openhour,.info-address{
-                                display: flex;
-                                .material-symbols-outlined{
-                                    width: 18px;
-                                    padding-top: 10px;
-                                    padding-right: 30px;
-                                }
-                                li{
-                                    padding-top: 7px;
-                                    font-size: 20px;
-                                    .info-logo{
-                                        line-height: 2px;
+                        // 門市資訊
+                        .info{
+                            max-width: 100%;
+                            .branch-name{
+                                font-size: 24px;
+                                padding-top: 8px;
+                                padding-bottom: 8px;
+                                padding-left: 24px;
+                                border: 2px lightgray solid;
+                                border-bottom: 3px lightgray solid;
+                                max-width:100%;   
+                            }
+
+                            // 詳細資訊
+                            ul{
+                                border:2px lightgray solid;
+                                border-top: none;
+                                padding-top: 16px;
+                                padding-left: 24px; 
+                                padding-bottom: 16px;
+                                max-width:100%;
+                                .info-phone,.info-openhour,.info-address{
+                                    display: flex;
+                                    .material-symbols-outlined{
+                                        width: 18px;
+                                        padding-top: 10px;
+                                        padding-right: 30px;
+                                    }
+                                    li{
+                                        padding-top: 7px;
+                                        font-size: 20px;
+                                        .info-logo{
+                                            line-height: 2px;
+                                        }
                                     }
                                 }
                             }
-                            
-                    
                         }
                     }
-                }
+
+                    // 門市地圖
                     .map{
                         img{
                             max-width: 100%;
+                            margin: 0 0 64px 0;
                         }
-                 
                     } 
                 }
             }
         }
+
+        // 表尾
         .footer{
             position: relative;
             background-color: #9F1213;
             padding-left:4.82%;
             padding-right:4.82% ;
             height: 232px;
+
+            // 菜單/導覽列與社群
             .footer-title{
                 display: flex;
                 justify-content: space-between;
                 padding-top: 27px;
 
-                //ul
+                //ul:菜單/導覽列
                 .menu{
                     color: white;
                     display: none;
                     align-items: center;
-                        width: 0px;
-                        justify-content: space-between;
-                        display: flex;
-                        align-items: center;
+                    width: 0px;
+                    justify-content: space-between;
+                    display: flex;
+                    align-items: center;
                     li{
                         display: none;                
+                    }
                 }
-                }
+
+                // 社群
                 .connect-logo{
                     justify-content: flex-end;
                     z-index: 11;
@@ -991,6 +1067,7 @@ body{
                 }
             }
         
+            // 品牌資訊
             .footer-info{
                 padding-bottom: 15px;
                 border-bottom: 1px solid #CED4DA;
@@ -1000,28 +1077,31 @@ body{
                 ul{
                     width: 320px;
                     li{
-                    color: white;
-                    font-size: 16px;
-                    padding-bottom: 8px;
-                    padding-top: 0px;
-                }
-                a{
-                    color: white;
-                    text-decoration: none;
-                    padding-right: 22px;
-                    align-items: center;
-                    
-                    &:hover{
-                        color: #CED4DA;
+                        color: white;
+                        font-size: 16px;
+                        padding-bottom: 8px;
+                        padding-top: 0px;
+                    }
+                    a{
+                        color: white;
+                        text-decoration: none;
+                        padding-right: 22px;
+                        align-items: center;
+                        &:hover{
+                            color: #CED4DA;
+                        }
+                    }
+
+                    //icon-電話.信箱
+                    .material-symbols-outlined{
+                        padding-right: 10px;
+                        padding-bottom: 8px;
+                        font-size: 18px;
                     }
                 }
-                .material-symbols-outlined{
-                    padding-right: 10px;
-                    padding-bottom: 8px;
-                    font-size: 18px;
-                }
             }
-        }
+
+            //隱私權與服務條款
             .copyright{
                 color: white;
                 display: flex;
@@ -1033,15 +1113,9 @@ body{
                     font-size: 16px;
                     width: 330px;
                 }
-    
                 .privacy{
                     display: flex;
-                    padding: 5px 0 0 0;
-                    // .privacy1{
-                    //     display: flex;
-                    //     flex-direction: column;
-                    // }
-                    
+                    padding: 8px 0 0 0;
                     ul{
                         display: flex;
                         flex-direction: column;
@@ -1049,7 +1123,7 @@ body{
                         width: 170px;
                         height: 50px;
                         li{
-                            padding: 8px 0 0 0;
+                            padding: 10px 0 0 0;
                             a{
                                 color: white;
                                 font-size: 16px;
