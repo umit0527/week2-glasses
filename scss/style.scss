@@ -125,7 +125,7 @@ body{
                 border-left: #9F1213 7px solid;
             }
 
-            // 選擇分店
+            // 選擇分店與選單
             .branches-choose{
                 width:100%;
                 display: flex;
@@ -133,107 +133,29 @@ body{
                 padding-top: 32px;
                 padding-bottom:40px;
 
-                // 選擇分店-p
-                .choose{
+                // 選擇分店
+                label{
                     font-size: 24px;
+                    padding: 0 16px 0 0;
                 }
 
-                //下拉式選單
-                .drop {
-                    position: relative;
-                    display: block;
+                // 選單
+                select{
                     width: 304px;
+                    height: 38px;
                     padding-left: 10px;
-                    span{
-                        font-size: 18px;
-                    }
-                    &:hover {
-                      .dropOption {
-                        display: block;
-                      }
-                    }
-                    &:hover {
-                      .dropdown {
-                        display: block;
-                      }
-                    }
-                    &:hover {
-                      .dropdown.close {
-                        display: none;
-                      }
-                    }
-                    .dropOption {
-                      position: relative;
-                      width: auto;
-                      color: #666;
-                      font-size: 18px;
-                      background-color: #fff;
-                      padding: 6px;
-                      border: 1px solid lightgray;
-                      border-radius: 2px;
-                      box-sizing: border-box;
-                      cursor: pointer;
-                      &::after {
-                        content: "";
-                        position: absolute;
-                        top: 12px;
-                        right: 12px;
-                        border-width: 8px 6px;
-                        border-style: solid;
-                        border-color: #000 transparent transparent transparent;
-                      }
-                    }
+                    font-size: 18px;
+                    border: 1px solid lightgray;
+                    border-radius: 2px;
+                    color: gray;
+                    font-family: "Noto Sans TC","Roboto"; 
+                    outline: none;
 
-                    // 門市清單
-                    .dropdown {
-                        display: none;
-                        width: 97%;
-                        max-height: 185px;
-                        position: absolute;
-                        color: #333;
-                        padding: 0;
-                        margin: 0;
-                        background-color: #f9f9f9;
-                        box-shadow: 0px 2px 3px 0px #ccc;
+                    option{
                         border-radius: 2px;
-                        box-sizing: border-box;
-                        overflow: auto;
-                        z-index: 9;
-                        // 清單樣式
-                        > li {
-                            display: block;
-                            color:#666;
-                            font-size: 18px;
-                            margin:  2px;
-                            padding: 5px;
-                            cursor: pointer;
-                            &:first-child {
-                            }
-                            &:last-child {
-                            }
-                            &:hover {
-                            background-color: lighten(gray,40%);
-                            color: #333;
-                            border-radius: 2px;
-                            }
-                        }
-                        // 滑鼠軌道
-                        &::-webkit-scrollbar {
-                            width: 15px;
-                        }
-                        &::-webkit-scrollbar-track {
-                            background-color: #eee;
-                            border-radius: 2px;
-                        }
-                        &::-webkit-scrollbar-thumb {
-                            background-color: #888;
-                            &:active{
-                                background-color: #777;
-                            }
-                            border-radius: 5px;
-                            }  
-                        }
+                        border: 1px solid;
                     }
+                }
             }
 
             // 資訊與地圖
@@ -285,13 +207,6 @@ body{
                         }
                     }
                 }
-
-                // 門市地圖
-                .map{
-                    img{
-                        max-width: 100%;
-                    }
-                } 
             }
         }
     }
@@ -468,7 +383,7 @@ body{
                 border-left: #9F1213 7px solid;
             }
             
-            // 選擇分店
+            // 選擇分店與選單
             .branches-choose{
                 width:100%;
                 display: flex;
@@ -476,108 +391,27 @@ body{
                 padding-top: 32px;
                 padding-bottom:40px;
 
-                // 選擇分店-p
-                .choose{
+                // 選擇分店
+                label{
                     font-size: 24px;
+                    padding: 0 16px 0 0;
                 }
 
-                //下拉式選單
-                .drop {
-                    position: relative;
-                    display: block;
+                // 選單
+                select{
                     width: 304px;
+                    height: 38px;
                     padding-left: 10px;
-                    span{
-                        font-size: 18px;
-                    }
-                    &:hover {
-                      .dropOption {
-                        display: block;
-                      }
-                    }
-                    &:hover {
-                      .dropdown {
-                        display: block;
-                      }
-                    }
-                    &:hover {
-                      .dropdown.close {
-                        display: none;
-                      }
-                    }
-                    .dropOption {
-                      position: relative;
-                      width: auto;
-                      color: #666;
-                      font-size: 18px;
-                      background-color: #fff;
-                      padding: 6px;
-                      border: 1px solid lightgray;
-                      border-radius: 2px;
-                      box-sizing: border-box;
-                      cursor: pointer;
-                      &::after {
-                        content: "";
-                        position: absolute;
-                        top: 12px;
-                        right: 12px;
-                        border-width: 8px 6px;
-                        border-style: solid;
-                        border-color: #000 transparent transparent transparent;
-                      }
-                    }
+                    font-size: 18px;
+                    border: 1px solid lightgray;
+                    border-radius: 2px;
+                    color: gray;
+                    font-family: "Noto Sans TC","Roboto"; 
+                    outline: none;
 
-                    // 門市清單
-                    .dropdown {
-                      display: none;
-                      width: 97%;
-                      max-height: 185px;
-                      position: absolute;
-                      color: #333;
-                      padding: 0;
-                      margin: 0;
-                      background-color: #f9f9f9;
-                      box-shadow: 0px 2px 3px 0px #ccc;
-                      border-radius: 2px;
-                      box-sizing: border-box;
-                      overflow: auto;
-                      z-index: 10;
-                      // 清單樣式
-                      > li {
-                        display: block;
-                        color:#666;
-                        font-size: 18px;
-                        margin:  2px;
-                        padding: 5px;
-                        cursor: pointer;
-                        &:first-child {
-                        }
-                        &:last-child {
-                          
-                        }
-                        &:hover {
-                          background-color: lighten(gray,40%);
-                          color: #333;
-                          border-radius: 2px;
-                          
-                        }
-                      }
-                      // 滑鼠軌道
-                      &::-webkit-scrollbar {
-                        width: 15px;
-                      }
-                      &::-webkit-scrollbar-track {
-                        background-color: #eee;
+                    option{
                         border-radius: 2px;
-                      }
-                      &::-webkit-scrollbar-thumb {
-                        background-color: #888;
-                        &:hover{
-                            background-color: #777;
-                        }
-                        border-radius: 5px;
-                      }
-                      
+                        border: 1px solid ;
                     }
                 }
             }
@@ -640,10 +474,8 @@ body{
                 }
 
                 // 門市地圖
-                .map{
-                    img{
-                        max-width: 100%;
-                    }
+                iframe{
+                    width: 100%;
                 } 
             }
         }
@@ -843,7 +675,7 @@ body{
                     border-left: #9F1213 7px solid;
                 }
                 
-                // 選擇分店
+                // 選擇分店與選單
                 .branches-choose{
                     width:100%;
                     display: flex;
@@ -852,105 +684,28 @@ body{
                     padding-top: 32px;
                     padding-bottom:40px;
                     
-                    // 選擇分店-p
-                    .choose{
+                    // 選擇分店
+                    label{
+                        width: 75px;
                         font-size: 16px;
+                        padding: 0 8px 0 0;
                     }
 
-                    //下拉式選單
-                    .drop {
-                        position: relative;
-                        display: block;
-                        width: 260px;
-                        padding-left: 0px;
-                        span{
-                            font-size: 18px;
-                        }
-                        &:hover {
-                            .dropOption {
-                                display: block;
-                            }
-                        }
-                        &:hover {
-                            .dropdown {
-                                display: block;
-                            }
-                        }
-                        &:hover {
-                            .dropdown.close {
-                                display: none;
-                            }
-                        }
-                        .dropOption {
-                            position: relative;
-                            width: auto;
-                            color: #666;
-                            font-size: 18px;
-                            background-color: #fff;
-                            padding: 6px;
-                            border: 1px solid lightgray;
+                    // 選單
+                    select{
+                        width: 276px;
+                        height: 38px;
+                        padding-left: 10px;
+                        font-size: 18px;
+                        border: 1px solid lightgray;
+                        border-radius: 2px;
+                        color: gray;
+                        font-family: "Noto Sans TC","Roboto"; 
+                        outline: none;
+                        
+                        option{
                             border-radius: 2px;
-                            box-sizing: border-box;
-                            cursor: pointer;
-                            &::after {
-                                content: "";
-                                position: absolute;
-                                top: 12px;
-                                right: 12px;
-                                border-width: 8px 6px;
-                                border-style: solid;
-                                border-color: #000 transparent transparent transparent;
-                            }
-                        }
-
-                        // 門市清單
-                        .dropdown {
-                            display: none;
-                            width: 97%;
-                            max-height: 185px;
-                            position: absolute;
-                            color: #333;
-                            padding: 0;
-                            margin: 0;
-                            background-color: #f9f9f9;
-                            box-shadow: 0px 2px 3px 0px #ccc;
-                            border-radius: 2px;
-                            box-sizing: border-box;
-                            overflow: auto;
-                            z-index: 10; 
-                            // 清單樣式
-                            > li {
-                                display: block;
-                                color:#666;
-                                font-size: 18px;
-                                margin:  2px;
-                                padding: 5px;
-                                cursor: pointer;
-                                &:first-child {
-                                }
-                                &:last-child {
-                                }
-                                &:hover {
-                                    background-color: lighten(gray,40%);
-                                    color: #333;
-                                    border-radius: 2px;
-                                }
-                            }
-                            // 滑鼠軌道
-                            &::-webkit-scrollbar {
-                                width: 15px;
-                            }
-                            &::-webkit-scrollbar-track {
-                                background-color: #eee;
-                                border-radius: 2px;
-                            }
-                            &::-webkit-scrollbar-thumb {
-                                background-color: #888;
-                                &:active{
-                                    background-color: #777;
-                                }
-                                border-radius: 5px;
-                            }
+                            border: 1px solid;
                         }
                     }
                 }
@@ -1012,11 +767,9 @@ body{
                     }
 
                     // 門市地圖
-                    .map{
-                        img{
-                            max-width: 100%;
-                            margin: 0 0 64px 0;
-                        }
+                    iframe{
+                        width: 100%;
+                        padding-bottom: 64px;
                     } 
                 }
             }
